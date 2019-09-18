@@ -70,6 +70,7 @@ ul{
     align-items: center;
     height: inherit;
     padding: 0 10px;
+    flex-wrap: wrap;
 }
 
 .menu {
@@ -88,6 +89,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .imgportada{
@@ -114,7 +116,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Colocar hacia abajo cuando ya no caben*/
     /* box-sizing: border-box;  Colocar un tamaño fijo a un elemento */
 }
 
@@ -168,6 +170,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .experiencia-list{
@@ -228,6 +231,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .social{
@@ -279,7 +283,8 @@ ul{
 
 .container{
     /* border: 1px solid red; */
-    width: 1000px;
+    max-width: 1000px;
+    flex: 1; /*utilizar toda la pantalla */
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -288,9 +293,14 @@ ul{
     flex-wrap: wrap;
 }
 
-.logo1{
+/* .logo1{
     width: 100px;
     height: 100px;
+} */
+
+.imglogo{
+    height: 100px;
+    width: 100px;
 }
 
 /* Media queries */
@@ -306,11 +316,37 @@ ul{
 /*desktop-first*/
 
 @media screen and (max-width: 1200px){
-    
+
 }
 
 @media screen and (max-width: 1024px){
 
+}
+
+@media screen and (max-width: 767px){
+
+    .header{
+        display: block;
+        height: auto;
+    }
+    .header ol{
+        display: initial;
+    }
+    .header ol li {
+        height: 50px;
+    }
+
+    .header a{
+        justify-content: center;
+    }
+
+    .header .logo1{
+        text-align: center;
+    }
+    .imglogo{
+        height: 150px;
+        width: 150px;
+    }
 }
 
 @media screen and (max-width: 680px){
