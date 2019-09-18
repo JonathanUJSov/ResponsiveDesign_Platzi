@@ -1,0 +1,326 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif; /*Tipo de fuente */
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 600;
+}
+
+h1{
+    margin: 0px;
+    font-size: 40px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+}
+
+h2 {
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+figure
+{
+    margin: 0;
+}
+
+
+.header{
+    height: 90px;
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header nav{
+    height: inherit;
+}
+ol,
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header ol{
+    display: flex;
+    height: inherit;
+}
+
+.header ol li {
+    height: inherit;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+
+.menu {
+    height: inherit;
+}
+
+
+
+.hero{
+    height: 15em;
+    background-color: #1b2127;
+    /* background-image: url('../images/portada.jpg'); */
+    /* background-size: 30% 100%; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgportada{
+    width: 300px;
+    object-fit: cover;
+}
+
+.portfolio{
+    background: #fff;
+    margin: 0;
+    display: flex;
+}
+
+.portafolio-title{
+    margin: 0;
+}
+
+.project{
+    border: 1px solid #1b2127;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* box-sizing: border-box;  Colocar un tamaño fijo a un elemento */
+}
+
+.project-details{
+    width: 500px;
+    margin: 0;
+}
+
+.project-title{
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.project-subtitle,
+.project-date,
+.project-url{
+    margin: 10px 0;
+}
+
+.project-description{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.project-image{
+    width: 450px;
+    height: 240px;
+}
+
+/*Padre*/
+/*EL ELEMENTO DIV TIENE COMO PROPIEDAD POR DEFECTO DISPLAY=BLOCK ESTO NO PERMITE COLOCAR ELEMENTOS AL LADO DEL OTRO*/
+.flexbox {
+    height: 100px;
+    display: flex; /**/
+    flex-wrap: wrap; /*que los elementos cambien de fila cuando ya no quepa en el ancho del div*/
+    align-items: center;
+    justify-content: center;
+}
+/*Hijo*/
+.box {
+    width: 20px;
+    height: 20px;
+    border:1px solid green;
+    flex-shrink: 0; /*Capacidad de 'encoger' del elemento*/
+}
+
+.footer{
+    color:white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experiencia-list{
+    margin: 0;
+    display:flex;
+}
+
+.events-title{
+    margin-left: 0px;
+}
+
+.event{
+    margin: 10px;
+    width: 480px;
+    border-radius: 5px;
+    overflow: hidden; /*Para evitar que lo que esta dentro no se desborde*/
+    flex-shrink: 0;
+    background-color: #4970a1;
+}
+
+.event-image-container{
+    width: 300px;
+    margin: 0;
+}
+
+.event-image{
+    width: 480px; /*Toma el tamaño (hereda) del contenedor padre*/
+    height: 330px;
+    object-fit: cover; /*Colocar imagen al tamaño de su contenedor*/
+}
+
+.event-detail{
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative; /*Colocar contenedor sobre la imagen*/
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-title-desc{
+    margin: 0;
+}
+
+.event-detail a{
+    border: 1px solid #1b2127;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #001f44;
+    border-radius: 5px;
+}
+
+.contact{
+    color: white;
+    background-color: #052b5a;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social{
+    /* border: 1px solid red; */
+}
+
+.social-link{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    margin: 0 20px;
+
+}
+
+.social-link.twitter{
+    background-image: url('../images/twitter.svg');
+}
+.social-link.facebook{
+    background-image: url('../images/facebook.svg')
+}
+.social-link.github{
+    background-image: url('../images/github.svg')
+}
+.social-link.instagram{
+    background-image: url('../images/instagram.svg')
+}
+
+.form-email input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px 5px 28px;
+    background-image: url('../images/envelope.svg');
+    background-position-y: center;
+    background-position-x: 4px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.form-email button{
+    border: 1px solid white;
+    display: block;
+    border-radius: 3px;
+    margin-top: 10px;
+    background: transparent;
+    color:white;
+    padding: 5px 10px;
+}
+
+.container{
+    /* border: 1px solid red; */
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: wrap;
+}
+
+.logo1{
+    width: 100px;
+    height: 100px;
+}
+
+/* Media queries */
+/*Segunda forma de agregar un media querie*/
+/* @media screen and (max-width: 680px){
+    body{
+        border: #001f44 solid 10px;
+    }
+} */
+
+/*MEDIA QUERIE PARA EL PORTAFOLIO*/
+
+/*desktop-first*/
+
+@media screen and (max-width: 1200px){
+    
+}
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 680px){
+
+}
+
+@media screen and (max-width: 480px){
+
+}
+
+@media screen and (max-width: 320px){
+
+}

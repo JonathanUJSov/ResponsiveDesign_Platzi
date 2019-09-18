@@ -1,0 +1,125 @@
+
+Clase 3
+
+Responsive design
+
+¿Qué es?
+
+Son todas aquellas implementaciones que nos permiten adaptar nuestras paginas web a otras pantallas. Este tipo de implementación surgió aproximadamente a partir del 2011. Como pionero de esta tecnología tenemos a Luke Wroblewski.
+
+Patrones de responsive design
+
+Mostly fluid: El sitio a partir de cierta dimensión de la pantalla se empieza a redimensionar para aprovechar más el contenido.
+Column drop: (Colocación de columnas) Similar al anterior, el tamaño del sitio es porcentual, el sitio web es completamente flexible. El elemento principal de la pagina aunque no este inicialmente arriba, puede quedar en esa posición al redimensionar según el tamaño del dispositivo.
+
+Layout shifter: Mas complejo que los 2 anteriores, con variaciones dentro de los layouts.
+
+Tiny tweetks: Ligeras modificaciones (tamaños de texto, tamaño de imagen, etc).
+
+Off canvas: Menús de hamburguesa. Este tipo de patron esconde algunos elementos fuera del canvas (viewport), muy usado para menús laterales.
+
+Conceptos nuevos
+
+Viewport: Área visible del navegador.
+
+Portrait – landscape: Orientación global del dispositivo, la cual puede ser horizontal o vertical.
+
+Mobile first/Desktop first: Empezar un website desde la mayor o menor resolución soportada, dependiendo del target con el que vamos a desarrollar el proyecto.
+
+Patrones en Responsive Desing:
+
+Mostly Fluid:
+El patrón Mostly fluid consiste, principalmente, en una cuadrícula fluida. Por lo general, en las pantallas grandes o medianas se mantiene el mismo tamaño y simplemente se ajustan los márgenes en las más anchas.
+En las pantallas más pequeñas, la cuadrícula fluida genera el reprocesamiento del contenido principal, mientras que las columnas se apilan verticalmente. Una de las mayores ventajas de este patrón es que, en general, solo se necesita un punto de interrupción entre las pantallas grandes y las pequeñas.
+
+Colocación de columnas:
+En el caso de los diseños con varias columnas de ancho completo, durante el proceso de colocación de columnas éstas únicamente se colocan de forma vertical debido a que el ancho de la ventana es demasiado reducido para el contenido.
+En un momento dado, todas las columnas se apilan verticalmente. La selección de puntos de interrupción para este patrón de diseño depende del contenido y cambia para cada diseño.
+
+Layout shifter:
+El patrón Layout shifter es el más adaptable, ya que posee varios puntos de interrupción en diferentes anchos de pantalla.
+La clave para este diseño es el desplazamiento del contenido, en lugar de su reprocesamiento y colocación debajo de otras columnas. Debido a las diferencias significativas entre cada punto de interrupción principal, es más complejo de mantener, y es posible que se deban realizar cambios dentro de los elementos, no solo en el diseño de contenido general.
+
+Tiny tweaks:
+El patrón Tiny tweaks permite realizar pequeños cambios en el diseño, como ajustar el tamaño de la fuente, cambiar el tamaño de las imágenes o desplazar el contenido de maneras muy poco significativas.
+Funciona correctamente en diseños con una sola columna, como los sitios web lineales de una sola página y los artículos con mucho texto.
+
+Off canvas:
+En lugar de apilar contenido verticalmente, el patrón Off canvas coloca contenido menos usado (tal vez menús de navegación o de apps) fuera de la pantalla y solo lo muestra cuando el tamaño de la pantalla es suficientemente grande. En las pantallas más pequeñas, el acceso al contenido es posible con solo a un clic.
+
+Ejemplos de webs
+
+Mostly fluid:
+https://alistapart.com/
+http://simplebits.com/
+
+Colocación de columnas:
+https://modernizr.com/
+http://weenudge.com/
+
+Layout shifter:
+https://www.anderssonwise.com/
+https://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html
+
+Tiny tweaks:
+http://gingerwhale.com/
+http://futurefriendlyweb.com/
+
+Off canvas:
+https://www.html5rocks.com/en/tutorials/developertools/async-call-stack/
+https://store.google.com/countrypicker
+
+Clase 6
+
+Medidas útiles en Responsive Design
+
+%: Porcentaje, se mide en referencia a la longitud de los elementos padres.
+
+em: Unidad relativa al tamaño de fuente mas cercana, la fuente mas cercana escala primero al elemento mismo, sino lo hace con el elemento padre mas cercano que tenga fuente.
+
+rem: Unidad relativa al tamaño de fuente mas lejana (html o body).
+
+vw/vh: Unidad relativa conceptual en relación al Viewport.
+
+100 vw: 100% del width con respecto al Viewport actual.
+
+100 vh: 100% del height con respecto al Viewport actual.
+
+
+Clase 7
+
+Para que logres los resultados que deseas en tus proyectos, es necesario cambiar ciertas propiedades para modificar el tamaño de los textos, contenidos y hojas de estilo; la manera de hacer esto es el media queries.
+
+El media queries es un módulo de css que hace posible al responsive design, éste existe desde el 2010 y se encarga de adaptar la representación del contenido a características del dispositivo.
+media Queries
+
+gracias a este modulo exite responsive desing
+
+mudulo CSS3S que permite adaptar la representacion del contenido a caracteristicas del dispositivo
+
+@media media type and (condición) { }
+se compone de un media type y una o mas condiciones
+
+ejemplo
+
+@media screen type and (max-width: 768px) { }
+todas las pantallas con un ancho inferior o igual a 768px cumplen con esta funcion
+
+@media screen type and (max-width: 768px) and (min-width: 480px) { }
+todas las pantallas con un ancho de 480px hasta 768px cumplen con esta funcion
+
+Mobile Firts
+
+@media screen and (max-width: 320px) { }
+@media screen and (max-width: 480px) { }
+@media screen and (max-width: 768px) { }
+@media screen and (max-width: 1024px) { }
+usa min-width (min-width = desde)
+
+Desktop Firts
+
+@media screen and (min-width: 1024px) { }
+@media screen and (min-width: 768px) { }
+@media screen and (min-width: 480px) { }
+@media screen and (min-width: 320px) { }
+usa max-width (max-width = hasta)
