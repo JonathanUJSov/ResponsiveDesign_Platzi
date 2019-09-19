@@ -123,3 +123,21 @@ Desktop Firts
 @media screen and (min-width: 480px) { }
 @media screen and (min-width: 320px) { }
 usa max-width (max-width = hasta)
+
+
+
+Clase 15
+
+Positions
+
+Cuando asignamos un valor a la propiedad position que no sea static (por defecto), se desbloquean 2 propiedades, las cuales son z-index y (top, right, left y bottom).
+
+static: Posición que llevan todos los elementos por defecto.
+
+relative: El elemento se mueve (n) espacios desde la dirección desde vine se encontraba originalmente, salvaguardando también el espacio donde se encontraba. Cuando aplicas un valor positivo, se mueve en dirección contraria a este y viceversa.
+
+absolute: Se sale del elemento en el que se encontraba originalmente y se ubica de manera absoluta y relativa con relación al elemento mas cercano que tenga la posición relativa o por defecto con el último elemento de html (el cual puede ser body o html por defecto).
+
+fixed: Se queda fijo en un lugar especifico del viewport que se le indique.
+
+sticky: Permanece en un lugar asignado y cuando se hace scroll se queda fijo en un lugar en especifico hasta que se haga scroll contrario.
