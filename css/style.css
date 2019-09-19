@@ -121,9 +121,19 @@ ul{
 }
 
 .project-details{
-    width: 500px;
+    width: 50%;
     margin: 0;
 }
+
+.project-imageContainer{
+    width: 50%;
+    /*height: 240px;*/
+}
+
+.project-image{
+    max-width: 100%;
+}
+
 
 .project-title{
     font-size: 30px;
@@ -142,10 +152,7 @@ ul{
     margin: 15px 0;
 }
 
-.project-image{
-    width: 450px;
-    height: 240px;
-}
+
 
 /*Padre*/
 /*EL ELEMENTO DIV TIENE COMO PROPIEDAD POR DEFECTO DISPLAY=BLOCK ESTO NO PERMITE COLOCAR ELEMENTOS AL LADO DEL OTRO*/
@@ -303,6 +310,7 @@ ul{
     width: 100px;
 }
 
+
 /* Media queries */
 /*Segunda forma de agregar un media querie*/
 /* @media screen and (max-width: 680px){
@@ -347,10 +355,54 @@ ul{
         height: 150px;
         width: 150px;
     }
+
+    .project{
+        display: block;
+    }
+
+    .project-imageContainer{
+        width:auto;
+        text-align: center;
+    }
+
+    .project-details{
+        width: auto;
+        font-size: 15px;
+    }
+
+    .project-subtitle, .project-date, .project-url{
+        margin: 0.4em 0;
+    }
+
+    .project-title{
+        font-size: 1.5em;
+        margin-bottom: 0.3em;
+    }
+
+    .project-url{
+        font-size: 1em;
+    }
+
+    .project-subtitle{
+        font-size: 1em;
+    }
+
+    .project-date{
+        font-size: 1em;
+    }
+
+    .project-description{
+        font-size: 1em;
+    }     
+    
 }
 
 @media screen and (max-width: 680px){
 
+    .project-details{
+        width: auto;
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 480px){
