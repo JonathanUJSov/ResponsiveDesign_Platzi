@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?cws0ac');
+    src:  url('../fonts/icomoon.eot?cws0ac#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?cws0ac') format('truetype'),
+      url('../fonts/icomoon.woff?cws0ac') format('woff'),
+      url('../fonts/icomoon.svg?cws0ac#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+  
+
 body {
     font-family: 'Source Sans Pro', sans-serif; /*Tipo de fuente */
     margin: 0;
@@ -327,9 +359,21 @@ ul{
     height: 0;
     padding-top: 56.25%;
     position: relative;
-    object-fit: cover;
 }
 
+.burger-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:rgba(0,0,0,0.9);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 5;
+    margin: 0.5em;
+    color:white;
+}
 /* Media queries */
 /*Segunda forma de agregar un media querie*/
 /* @media screen and (max-width: 680px){
@@ -457,6 +501,10 @@ ul{
 
 @media screen and (max-width: 480px){
 
+    .portfolio{
+        padding: 0;
+    }
+
     .project-details{
         width: auto;
         font-size: 12px;
@@ -495,6 +543,37 @@ ul{
     .hero{
         padding: 2em 1em;
     }
+
+    .burger-button{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        background:rgba(42, 49, 110,0.8);
+        z-index: 4;
+        top:0;
+        left: -100vw;
+        width: 100vw;
+        /* height: 100vh; */
+        bottom:0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: 0.3s;
+    }
+
+    .header a{
+        height: 1.5em;
+        font-size: 1.5em;
+        text-decoration: underline;
+    }
+
+    .menu.is-active{
+        left:0;
+    }
+
 }
 
 @media screen and (max-width: 320px){

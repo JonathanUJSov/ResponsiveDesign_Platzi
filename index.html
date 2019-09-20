@@ -19,20 +19,21 @@
         }
     </style> -->
     <body>
+        <i class="icon-menu burger-button" id="burgerid"></i>
         <header class="header">
             <div class="container">
                 <figure class="logo1">
                     <img src="./images/HermanoMenor_CC.png" alt="Logotipo" class="imglogo">
                 </figure>
-                <nav>
+                <nav class="menu">
                     <ol style="margin:0;">
                         <li>
-                            <a href="#portafolio">Portafolio</a>
+                            <a href="#portafolio" id="port">Portafolio</a>
                         </li>
                         <li>
-                            <a href="#experiencia">Experiencía</a>                        </li>
+                            <a href="#experiencia" id="exp">Experiencía</a>                        </li>
                         <li>
-                            <a href="#contacto">Trabajemos juntos</a>
+                            <a href="#contacto" id="Wt">Trabajemos juntos</a>
                         </li>
                         </ol>
                 </nav>
@@ -99,17 +100,17 @@
                 </article>
                 <article class="event">
                     <figure class="event-image-container">
-                        <div class="youtube-conteiner">
+                        <!-- <div class="youtube-conteiner">
                             <iframe class="youtube-video" src="https://www.youtube.com/embed/OFh3yz3coE0" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen></iframe>
                     
-                            <!-- Calcular el porcentaje del tamaño del video
+                            Calcular el porcentaje del tamaño del video
                             (Alto*100/Ancho)
                             (315*100/560) = 56
-                            -->
-                        </div>
-                        <!-- <img class="event-image" src="./images/aboutme.jpg" alt="Más Sobre Mi"> -->
+                            
+                        </div>-->
+                        <img class="event-image" src="./images/aboutme.jpg" alt="Más Sobre Mi">
                     </figure>
                     <div class="event-detail">
                         <h3 class="event-title-desc">Prueba de primera imagen</h3>
@@ -119,9 +120,9 @@
                 </article>
                 <article class="event">
                     <figure class="event-image-container">
-                        <!-- <img class="event-image" src="./images/aboutme.jpg" alt="Más Sobre Mi"> -->
-                        <video class="html-video" src="videos/Fstmiam-Abl.mp4" width="1280" height="720" controls>
-                        </video>
+                        <img class="event-image" src="./images/aboutme.jpg" alt="Más Sobre Mi">
+                        <!-- <video class="html-video" src="videos/Fstmiam-Abl.mp4" width="1280" height="720" controls>
+                        </video> -->
                     </figure>
                     <div class="event-detail">
                         <h3 class="event-title-desc">Prueba de primera imagen</h3>
@@ -171,5 +172,44 @@
                 
             </div>
         </footer>
+        <script>
+            const men = document.querySelector('.menu');
+            const port = document.querySelector('#port');
+            const exp = document.querySelector('#exp');
+            const wt = document.querySelector('#wt');
+            const brbtn = document.querySelector('#burgerid');
+
+            const iphone= window.matchMedia('screen and (max-width:480px)');
+
+            men.addEventListener('click', function(){
+                    men.classList.remove('is-active')
+                    });
+            
+            iphone.addListener(valid)
+
+            function valid(event){
+                if(event.matches){
+                    brbtn.addEventListener('click',hideShow);
+                }
+                else{
+                    brbtn.removeEventListener('click',hideShow);
+                }
+                
+            }
+
+            valid(iphone);
+
+            function hideShow(){
+                if(men.classList.contains('is-active')){
+                    men.classList.remove('is-active'); /*Agregar clase a clase .menu*/
+                    
+                }
+                else{
+                    men.classList.add('is-active'); /*Agregar clase a clase .menu*/
+                }
+
+            }
+
+        </script>
     </body>
 </html>
